@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova AI — Your Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-icon">✦</div><span>nova<span class="brand-light">.ai</span></span></div>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="side-label">YOUR SPACE</div>
+      <button class="side-link active"><span>◷</span> Current chat</button>
+      <div class="side-bottom">
+        <button class="side-link" id="themeToggle"><span>☼</span> Toggle theme</button>
+        <div class="profile"><div class="avatar">Y</div><div><strong>Guest User</strong><small>Free plan</small></div><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="model-name">Nova Assistant <span class="model-tag">DEMO</span></div>
+        <button class="clear-btn" id="clearChat">Clear chat</button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="welcome-symbol">✦</div>
+          <p class="eyebrow">YOUR AI COMPANION</p>
+          <h1>What can I help<br><span>you with today?</span></h1>
+          <p class="welcome-copy">Ask me anything. Let's make something great together.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain artificial intelligence in simple words"><span>✧</span><div><b>Learn something</b><small>Explain a topic simply</small></div><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Give me 5 creative project ideas using HTML, CSS and JavaScript"><span>⌘</span><div><b>Get ideas</b><small>Explore creative possibilities</small></div><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Create a simple study plan for one week"><span>▤</span><div><b>Plan my day</b><small>Organize your goals</small></div><span class="arrow">↗</span></button>
+            <button class="suggestion" data-prompt="Write a short motivational quote for me"><span>♡</span><div><b>Get inspired</b><small>A little motivation</small></div><span class="arrow">↗</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" placeholder="Message Nova..." aria-label="Message Nova"></textarea>
+          <div class="composer-bottom"><span class="hint">Enter to send · Shift + Enter for new line</span><button class="send-btn" id="sendBtn" type="submit" aria-label="Send message">↑</button></div>
+        </form>
+        <p class="disclaimer">Nova is a demo chatbot and may make mistakes. It does not connect to a live AI service.</p>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
